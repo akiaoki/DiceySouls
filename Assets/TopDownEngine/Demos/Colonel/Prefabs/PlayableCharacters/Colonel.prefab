@@ -16419,7 +16419,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2747105371376102586}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80a52f88e226e0c459085cd4e4a38a7b, type: 3}
   m_Name: 
@@ -16515,9 +16515,9 @@ MonoBehaviour:
   AllowDashWhenJumping: 0
   Cooldown:
     Unlimited: 0
-    ConsumptionDuration: 2
-    PauseOnEmptyDuration: 1
-    RefillDuration: 1
+    ConsumptionDuration: 5
+    PauseOnEmptyDuration: 5
+    RefillDuration: 5
     CanInterruptRefill: 1
     CooldownState: 0
     CurrentDurationLeft: 0
