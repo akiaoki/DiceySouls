@@ -31,6 +31,29 @@ public class RigidbodySpawnImpulse : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
         _rigidbody.AddRelativeForce(DiceWeapon.DiceImpulse * DiceWeapon.CurrentCharge, ForceMode.Impulse);
+
+        switch (DiceWeapon.CurrentDiceValue)
+        {
+            case 1:
+                transform.rotation = Quaternion.Euler(new Vector3(-90, 0, 0));
+                break;
+            case 2:
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                break;
+            case 3:
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+                break;
+            case 4:
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
+                break;
+            case 5:
+                transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
+                break;
+            case 9:
+                transform.rotation = Quaternion.Euler(new Vector3(180, 0, 0));
+                break;
+        }
+        
         DiceWeapon.CurrentDice = gameObject;
     }
 

@@ -4827,6 +4827,98 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &2858714435172280020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6853700012923400154}
+  - component: {fileID: 3243922338725508700}
+  - component: {fileID: 2325269869293888013}
+  - component: {fileID: 6841943293147129976}
+  m_Layer: 0
+  m_Name: DiceCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6853700012923400154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858714435172280020}
+  m_LocalRotation: {x: 0.7071068, y: -0.00003085112, z: 0.00003085112, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4403048956655558326}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0.0050000004}
+--- !u!20 &3243922338725508700
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858714435172280020}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: -60.1
+  far clip plane: 2315.39
+  field of view: 60
+  orthographic: 1
+  orthographic size: 0.3
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 33554432
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 8400000, guid: 6a2aededd44b4f64595f95f50bf736a2, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!124 &2325269869293888013
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858714435172280020}
+  m_Enabled: 1
+--- !u!81 &6841943293147129976
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858714435172280020}
+  m_Enabled: 0
 --- !u!1 &4399115032722315126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,6 +5367,7 @@ Transform:
   - {fileID: 4396654131455339586}
   - {fileID: 5984656294291395110}
   - {fileID: 5452499208704662555}
+  - {fileID: 6853700012923400154}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5454,6 +5547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962e0a1912b54da49874f69feb82ae6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceCam: {fileID: 6853700012923400154}
   viewTransform: {fileID: 5452499208704662555}
   diceImpulse: {x: 0, y: 0, z: 0.3}
   minChargeTime: 0.1
@@ -30668,6 +30762,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DADO
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 496ef503d4f0f1b4eb2b77d919f9460f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303056368949183963, guid: 496ef503d4f0f1b4eb2b77d919f9460f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 496ef503d4f0f1b4eb2b77d919f9460f, type: 3}

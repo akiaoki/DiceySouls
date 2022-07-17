@@ -9,9 +9,11 @@ public class DiceWeapon : MonoBehaviour
 {
     // Never do like that
     public static float CurrentCharge;
+    public static int CurrentDiceValue;
     public static Vector3 DiceImpulse;
     public static GameObject CurrentDice = null;
-    
+
+    public Transform diceCam;
     public Transform viewTransform;
 
     public Vector3 diceImpulse;
@@ -39,6 +41,7 @@ public class DiceWeapon : MonoBehaviour
             if (_chargeTime >= minChargeTime && !CurrentDiceExists)
             {
                 CurrentCharge = Mathf.Min(_chargeTime, maxChargeTime);
+                CurrentDiceValue = Random.Range(1, 7);
                 _weapon.WeaponState.ChangeState(Weapon.WeaponStates.WeaponUse);
             }
         }
@@ -62,6 +65,8 @@ public class DiceWeapon : MonoBehaviour
             {
                 viewTransform.gameObject.SetActive(true);
             }
+
+            diceCam.position = viewTransform.position;
         }
         if (CurrentDiceExists)
         {
@@ -69,6 +74,8 @@ public class DiceWeapon : MonoBehaviour
             {
                 viewTransform.gameObject.SetActive(false);
             }
+            
+            diceCam.position = CurrentDice.transform.position;
         }
     }
 
