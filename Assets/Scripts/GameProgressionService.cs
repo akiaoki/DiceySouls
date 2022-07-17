@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using MoreMountains.TopDownEngine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class GameProgressionService : MonoBehaviour
 {
 
-    [System.Serializable]
+    [Serializable]
     public class EnemyVariant
     {
         public GameObject enemyPrefab;
         public float spawnTimeout;
+        public float spawnHealthMultiplier = 1.0f;
+        public bool ignore = true;
     }
 
     public int maxEnemies = 10;
@@ -24,6 +28,18 @@ public class GameProgressionService : MonoBehaviour
     public void AddEnemyVariant(EnemyVariant enemyVariant) => enemyVariants.Add(enemyVariant);
 
     public void AddSpawnPoint(Transform spawnPoint) => spawnPoints.Add(spawnPoint);
+
+    public void ToggleEnemyVariant(int id, bool targetState) => enemyVariants[id].ignore = targetState;
+
+    public void UpdateAllEnemyVariants(Action<EnemyVariant> action) => enemyVariants.ForEach(action);
+    
+    public void UpdateActiveEnemyVariants(Action<EnemyVariant> action) => enemyVariants.ForEach(x =>
+    {
+        if (!x.ignore)
+        {
+            action(x);
+        }
+    });
 
     private void Awake()
     {
@@ -46,7 +62,8 @@ public class GameProgressionService : MonoBehaviour
         }
 
         // Get a random variant
-        var v = enemyVariants[Random.Range(0, enemyVariants.Count)];
+        var availableEnemyVariants = enemyVariants.Where(x => !x.ignore).ToList();
+        var v = enemyVariants[Random.Range(0, availableEnemyVariants.Count)];
         // Get a random spawn point
         var s = spawnPoints[Random.Range(0, spawnPoints.Count)];
         // Spawn the entity
@@ -54,6 +71,10 @@ public class GameProgressionService : MonoBehaviour
         _spawnedEnemies.Add(enemy);
         // Add timeout
         _currentTimeout += v.spawnTimeout;
+
+        var health = enemy.GetComponent<Health>();
+        health.MaximumHealth = (int)(health.MaximumHealth * v.spawnHealthMultiplier);
+        health.CurrentHealth = (int)(health.CurrentHealth * v.spawnHealthMultiplier);
     }
 
     private int GetActiveEnemies()
