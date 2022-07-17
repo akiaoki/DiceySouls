@@ -113,6 +113,8 @@ MonoBehaviour:
   LayerOnDeath:
     _layerIndex: 0
   DeathMMFeedbacks: {fileID: 0}
+  XPpoint: {fileID: 5358168849158856500, guid: 4931fba818d691443999cde3d918a1b7, type: 3}
+  Heart: {fileID: 5358168849158856500, guid: 4931fba818d691443999cde3d918a1b7, type: 3}
 --- !u!114 &1352438015544645025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +131,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12032
   PerfectImpact: 0
-  DamageCaused: 10
+  DamageCaused: 1
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 2, z: 0}
@@ -229,8 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7f5971500860c4fb9873a5ddd8fbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: {x: 0, y: 0, z: 0.4}
-  diceWeaponChargeModifier: 1
 --- !u!1 &5606024681397435285
 GameObject:
   m_ObjectHideFlags: 0

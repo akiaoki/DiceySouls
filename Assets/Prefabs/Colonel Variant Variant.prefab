@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2495037754446100635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6573902422526303614}
+  - component: {fileID: 8790425517079696555}
+  - component: {fileID: 2315538317766369731}
+  m_Layer: 10
+  m_Name: XPColl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6573902422526303614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495037754446100635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7038794248196934138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8790425517079696555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495037754446100635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05049cff4caf2df468112220c39de8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2315538317766369731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495037754446100635}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 2.5, z: 0.7}
+  m_Center: {x: 0, y: 0.89554, z: 0}
+--- !u!114 &5105525623964070702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038794248196934124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05049cff4caf2df468112220c39de8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &397451809771825169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 7217821338040164861, guid: d88a68ac8f5432940b4e16a53880ebf8,
         type: 3}
       propertyPath: m_Name
-      value: Colonel Variant
+      value: Colonel Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7219096238694896542, guid: d88a68ac8f5432940b4e16a53880ebf8,
         type: 3}
@@ -120,6 +189,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d88a68ac8f5432940b4e16a53880ebf8, type: 3}
+--- !u!1 &7038794248196934124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7217821338040164861, guid: d88a68ac8f5432940b4e16a53880ebf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 397451809771825169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7038794248196934138 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7217821338040164843, guid: d88a68ac8f5432940b4e16a53880ebf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 397451809771825169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7038794248462087630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7217821337776823775, guid: d88a68ac8f5432940b4e16a53880ebf8,

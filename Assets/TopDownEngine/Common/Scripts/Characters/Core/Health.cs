@@ -101,7 +101,12 @@ namespace MoreMountains.TopDownEngine
 		public delegate void OnDeathDelegate();
 		public OnDeathDelegate OnDeath;
 
-		protected Vector3 _initialPosition;
+        [SerializeField]
+        private GameObject XPpoint;
+        [SerializeField]
+        private GameObject Heart;
+
+        protected Vector3 _initialPosition;
 		protected Renderer _renderer;
 		protected Character _character;
 		protected TopDownController _controller;
@@ -114,8 +119,7 @@ namespace MoreMountains.TopDownEngine
         protected AutoRespawn _autoRespawn;
         protected Animator _animator;
         protected int _initialLayer;
-        
-        /// <summary>
+                /// <summary>
         /// On Start, we initialize our health
         /// </summary>
         protected virtual void Awake()
@@ -281,6 +285,15 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public virtual void Kill()
         {
+            for (int i = 0; i < 50; i++) {
+                print(Random.Range(0, 10f));
+            }
+            Instantiate(XPpoint, gameObject.transform.position, Quaternion.identity);
+            if (Random.Range(0, 10f) > 8)
+            {
+                Instantiate(Heart, gameObject.transform.position, Quaternion.identity);
+            }
+
             if (_character != null)
             {
                 // we set its dead state to true
@@ -373,6 +386,8 @@ namespace MoreMountains.TopDownEngine
 			}
 			else
 			{
+                
+
 				// finally we destroy the object
 				DestroyObject();	
 			}
