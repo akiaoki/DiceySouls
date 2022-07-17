@@ -24,4 +24,7 @@ public class XPCollector : MonoBehaviour
             XPtext.text = XPslider.value.ToString();
         }
     }
+
+
+
 }

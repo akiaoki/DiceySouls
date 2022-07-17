@@ -46,6 +46,9 @@ namespace MoreMountains.TopDownEngine
         [Tooltip("the feedbacks to play when dashing")]
         public MMFeedbacks DashFeedback;
 
+        [SerializeField]
+        private GameObject UIdash;
+
         protected bool _dashing;
         protected bool _dashStartedThisFrame;
         protected float _dashTimer;

@@ -285,9 +285,7 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public virtual void Kill()
         {
-            for (int i = 0; i < 50; i++) {
-                print(Random.Range(0, 10f));
-            }
+            
             Instantiate(XPpoint, gameObject.transform.position, Quaternion.identity);
             if (Random.Range(0, 10f) > 8)
             {
