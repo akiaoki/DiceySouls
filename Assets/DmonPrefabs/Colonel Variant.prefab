@@ -7,6 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2747105371376102561, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747105371376102563, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: DashDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747105371376102563, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: Cooldown.Unlimited
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747105371376102563, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: Cooldown.RefillDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747105371376102563, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: Cooldown.CanInterruptRefill
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747105371376102563, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: Cooldown.ConsumptionDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747105371376102563, guid: 791e0862de6c79941973ed781c9decb4,
+        type: 3}
+      propertyPath: Cooldown.PauseOnEmptyDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2747105371376102572, guid: 791e0862de6c79941973ed781c9decb4,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 2747105371376102586, guid: 791e0862de6c79941973ed781c9decb4,
         type: 3}
       propertyPath: m_Name
-      value: Colonel
+      value: Colonel Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2747105371376102586, guid: 791e0862de6c79941973ed781c9decb4,
         type: 3}

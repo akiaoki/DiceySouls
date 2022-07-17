@@ -16335,7 +16335,7 @@ MonoBehaviour:
     m_Bits: 512
   ObstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4294967295
   ImpactFalloff: 5
   PushPower: 2
   MaximumFallSpeed: 20
