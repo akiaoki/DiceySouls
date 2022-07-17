@@ -16543,7 +16543,7 @@ MonoBehaviour:
   Movement: 0
   InputAuthorized: 1
   AnalogInput: 1
-  WalkSpeed: 2
+  WalkSpeed: 4
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 10
