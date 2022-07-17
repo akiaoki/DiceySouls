@@ -150,6 +150,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114406917456268320, guid: ac32a8e25dd86c446826e440005f6388,
+        type: 3}
+      propertyPath: VelocityTransferMethod
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114441692865175846, guid: ac32a8e25dd86c446826e440005f6388,
         type: 3}
       propertyPath: PathElements.Array.size
