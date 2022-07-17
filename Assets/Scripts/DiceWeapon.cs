@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.TopDownEngine;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class DiceWeapon : MonoBehaviour
@@ -25,7 +26,12 @@ public class DiceWeapon : MonoBehaviour
 
     private float _chargeTime;
     private bool _playRotationAnimation = false;
-    
+
+
+    public Image Yellow;
+    public GameObject Dice;
+
+
     private void Awake()
     {
         _weapon = GetComponent<ProjectileWeapon>();
@@ -40,6 +46,11 @@ public class DiceWeapon : MonoBehaviour
             {
                 CurrentCharge = Mathf.Min(_chargeTime, maxChargeTime);
                 _weapon.WeaponState.ChangeState(Weapon.WeaponStates.WeaponUse);
+
+                
+                Yellow.fillAmount = 0;
+                Dice.SetActive(false);
+                StartCoroutine(TestCoroutine());
             }
         }
         
@@ -47,7 +58,16 @@ public class DiceWeapon : MonoBehaviour
         _playRotationAnimation = false;
     }
 
-    private void Update()
+    IEnumerator TestCoroutine()
+    {
+        while (Yellow.fillAmount != 1)
+        {
+            Yellow.fillAmount += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        Dice.SetActive(true);
+    }
+        private void Update()
     {
         DiceImpulse = diceImpulse;
         

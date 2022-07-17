@@ -9976,7 +9976,7 @@ RectTransform:
   m_Children:
   - {fileID: 603938280}
   m_Father: {fileID: 687831982}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -13151,7 +13151,7 @@ PrefabInstance:
     - target: {fileID: 4642389503261899183, guid: 313e0add010c2c244b21a16a6ff7214c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -165
+      value: -164.99998
       objectReference: {fileID: 0}
     - target: {fileID: 4642905305091928207, guid: 313e0add010c2c244b21a16a6ff7214c,
         type: 3}
@@ -13196,7 +13196,7 @@ PrefabInstance:
     - target: {fileID: 4642958636770552813, guid: 313e0add010c2c244b21a16a6ff7214c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -166
+      value: -165.99998
       objectReference: {fileID: 0}
     - target: {fileID: 4819978764189132285, guid: 313e0add010c2c244b21a16a6ff7214c,
         type: 3}
@@ -13762,7 +13762,7 @@ GameObject:
   - component: {fileID: 392486773}
   - component: {fileID: 392486772}
   m_Layer: 5
-  m_Name: HealthBar (2)
+  m_Name: SPECIALFORAKI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13779,9 +13779,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1444901670}
   - {fileID: 802150733}
   m_Father: {fileID: 687831982}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -13808,7 +13809,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 331347123ed8aa743933d42b65b3b600, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -22964,7 +22965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &802150733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22977,7 +22978,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 392486771}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -37776,8 +37777,10 @@ GameObject:
   - component: {fileID: 1444901670}
   - component: {fileID: 1444901672}
   - component: {fileID: 1444901671}
+  - component: {fileID: 1444901674}
+  - component: {fileID: 1444901673}
   m_Layer: 5
-  m_Name: HealthBar (6)
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37790,17 +37793,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444901669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
-  m_Father: {fileID: 687831982}
-  m_RootOrder: 8
+  m_Father: {fileID: 392486771}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -105.00134, y: 143.40118}
-  m_SizeDelta: {x: 25, y: 25}
+  m_AnchoredPosition: {x: -75.98517, y: 81.39128}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &1444901671
 MeshFilter:
@@ -37849,6 +37852,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1444901673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444901669}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1444901674
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444901669}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1457194493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51775,15 +51815,26 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7038794248196934123, guid: 02c4d4100cfece14a84d354f34644996,
         type: 3}
+      propertyPath: Heart
+      value: 
+      objectReference: {fileID: 5358168849158856500, guid: 4931fba818d691443999cde3d918a1b7,
+        type: 3}
+    - target: {fileID: 7038794248196934123, guid: 02c4d4100cfece14a84d354f34644996,
+        type: 3}
       propertyPath: XPpoint
       value: 
-      objectReference: {fileID: 8407413789287346942, guid: 6552f485c8e4225409f6d0b35046ba32,
+      objectReference: {fileID: 5358168849158856500, guid: 4931fba818d691443999cde3d918a1b7,
         type: 3}
     - target: {fileID: 7038794248196934124, guid: 02c4d4100cfece14a84d354f34644996,
         type: 3}
       propertyPath: m_Name
       value: Colonel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7038794248196934133, guid: 02c4d4100cfece14a84d354f34644996,
+        type: 3}
+      propertyPath: UIdash
+      value: 
+      objectReference: {fileID: 234252748}
     - target: {fileID: 7038794248196934138, guid: 02c4d4100cfece14a84d354f34644996,
         type: 3}
       propertyPath: m_RootOrder
@@ -51957,6 +52008,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547598513494609142, guid: 7168ca8619db26540b8257ae1aecea3d,
+        type: 3}
+      propertyPath: Dice
+      value: 
+      objectReference: {fileID: 1444901669}
+    - target: {fileID: 547598513494609142, guid: 7168ca8619db26540b8257ae1aecea3d,
+        type: 3}
+      propertyPath: Yellow
+      value: 
+      objectReference: {fileID: 392486772}
     - target: {fileID: 4399690027470427918, guid: 7168ca8619db26540b8257ae1aecea3d,
         type: 3}
       propertyPath: m_Name

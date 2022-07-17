@@ -4,7 +4,7 @@ using MoreMountains.Tools;
 using System.Collections.Generic;
 using MoreMountains.InventoryEngine;
 using MoreMountains.Feedbacks;
-
+using UnityEngine.UI;
 namespace MoreMountains.TopDownEngine
 {
     /// <summary>
@@ -67,6 +67,18 @@ namespace MoreMountains.TopDownEngine
         /// <summary>
         /// On init we initialize our cooldown and feedback
         /// </summary>
+        /// 
+        private void Update()
+        {
+            if (Cooldown.Ready())
+            {
+                UIdash.GetComponent<Image>().enabled = true;
+            }
+            else
+            {
+                UIdash.GetComponent<Image>().enabled = false;
+            }
+        }
         protected override void Initialization()
         {
             base.Initialization();
@@ -108,6 +120,8 @@ namespace MoreMountains.TopDownEngine
             {
                 return;
             }
+            
+
             Cooldown.Start();
 
             float angle  = 0f;
